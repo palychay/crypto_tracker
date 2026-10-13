@@ -218,3 +218,4 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+front_crypto/node_modules
