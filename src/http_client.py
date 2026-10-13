@@ -1,5 +1,4 @@
 from aiohttp import ClientSession
-from src.config import settings
 
 
 class HTTPClient():
@@ -10,6 +9,9 @@ class HTTPClient():
                 "X-CMC_PRO_API_KEY": api_key,
             }
         )
+
+    async def close(self) -> None:
+        await self._session.close()
 
 
 class CMCHTTPClient(HTTPClient):
